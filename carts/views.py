@@ -173,7 +173,7 @@ def cart(request, total=0, quantity=0, cart_items=None):
         tax = total * 2 / 100
         grand_total = total + tax
     except ObjectDoesNotExist:
-        pass
+        pass  # Chỉ bỏ qua
     print(request.user)
     context = {
         'total': total,
@@ -196,7 +196,7 @@ def checkout(request, total=0, quantity=0, cart_items=None):
         tax = total * 2 / 100
         grand_total = total + tax
     except ObjectDoesNotExist:
-        pass
+        pass  # Chỉ bỏ qua
     context = {
         'total': total,
         'quantity': quantity,

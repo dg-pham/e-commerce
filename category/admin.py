@@ -1,6 +1,6 @@
 # Register your models here.
 from django.contrib import admin
-from category.models import Category
+from .models import Category
 
 
 class CategoryAdmin(admin.ModelAdmin):

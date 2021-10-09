@@ -1,23 +1,18 @@
-from django.shortcuts import render
-
-# Create your views here.
-from re import split
-from carts.models import Cart, CartItem
-from django.shortcuts import redirect, render
+import requests
 from django.contrib import messages, auth
-from django.contrib.sites.shortcuts import get_current_site
-from django.template.loader import render_to_string
-from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
-from django.utils.encoding import force_bytes
-from django.core.mail import EmailMessage
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.tokens import default_token_generator
+from django.contrib.sites.shortcuts import get_current_site
+from django.core.mail import EmailMessage
+from django.shortcuts import redirect, render
+from django.template.loader import render_to_string
+from django.utils.encoding import force_bytes
+from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 
-from .forms import RegistrationForm
 from accounts.models import Account
+from carts.models import Cart, CartItem
 from carts.views import _cart_id
-
-import requests
+from .forms import RegistrationForm
 
 
 def register(request):
