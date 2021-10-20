@@ -7,6 +7,11 @@ db.sqlite3
 media
 static/images
 shopping/static/images
+accounts/migrations
+carts/migrations
+category/migrations
+orders/migrations
+store/migrations
 
 # Backup files #
 *.bak
@@ -119,3 +124,5 @@ GitHub.sublime-settings
 
 # Docker
 data
+Dockerfile
+docker-compose.yml
