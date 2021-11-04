@@ -127,3 +127,8 @@ data
 Dockerfile
 docker-compose.yml
 heroku.yml
+
+#
+heroku.yml
+Procfile
+staticfiles
