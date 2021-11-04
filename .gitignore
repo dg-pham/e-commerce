@@ -124,8 +124,6 @@ GitHub.sublime-settings
 
 # Docker
 data
-Dockerfile
-docker-compose.yml
 heroku.yml
 
 #

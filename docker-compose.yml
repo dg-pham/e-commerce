@@ -1,0 +1,26 @@
+version: '3'
+services:
+    web:
+        build: .
+        command: python /code/manage.py runserver 0.0.0.0:8000
+        volumes:
+            - .:/code
+        ports:
+            - '8001:8000'
+        depends_on:
+            - db
+        env_file:
+            - .env
+    db:
+        image: postgres
+        restart: always
+        environment:
+            POSTGRES_DB: d79lbrggcdftb2
+            POSTGRES_USER: vyijqswkboemro
+            POSTGRES_PASSWORD: 36f4b9be2aba76d7c73a849a698af9441d74a76ff66372a4c4b9ea8e6f4a82ec
+        volumes:
+            - ./data/db:/var/lib/postgresql/data
+        ports:
+            - '5431:5432'
+        env_file:
+            - .env
