@@ -2,20 +2,26 @@
 ## Cài đặt
 ![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)
 
-"""git clone https://github.com/lilbunnyfufuu/e-commerce.git"""
+```shell
+git clone https://github.com/lilbunnyfufuu/e-commerce.git
+```
 
 - Tải docker, cài đặt và chạy docker
 
 - Tải PostgreSQL và tạo schema shopping
 
 - Tạo file .env và điền các biến cần thiết
-"""docker build .
+```shell
+docker build .
 docker-compose build
-docker-compose up"""
+docker-compose up
+```
 - Tạo một cửa sổ CMD khác và chạy tiếp:
 
-"""docker-compose exec web pip install -r requirements.txt
+```shell
+docker-compose exec web pip install -r requirements.txt
 docker-compose exec web python manage.py makemigrations
-docker-compose exec web python manage.py migrate"""
+docker-compose exec web python manage.py migrate
+```
 
-**Ứng dụng chạy tại 127.0.0.1:8000**
+**Ứng dụng chạy tại ```127.0.0.1:8000```**
