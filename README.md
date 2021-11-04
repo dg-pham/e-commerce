@@ -12,6 +12,7 @@ Tạo file .env và điền các biến cần thiết
 ####docker-compose build
 ####docker-compose up
 Tạo một cửa sổ CMD khác và chạy tiếp:
+####docker-compose exec web pip install -r requirements.txt
 ####docker-compose exec web python manage.py makemigrations
 ####docker-compose exec web python manage.py migrate
 Ứng dụng chạy tại 127.0.0.1:8000
